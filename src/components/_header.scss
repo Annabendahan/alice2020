@@ -1,0 +1,19 @@
+header {
+  color: map-get($colors, blue);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 9;
+  padding: 2rem 1rem;
+}
+
+.navs {
+  a {
+    color: map-get($colors, blue);
+    text-decoration: none;
+    margin: 0px 20px;
+    font-family: Work Sans;
+    font-size: 0.8rem;
+  }
+}

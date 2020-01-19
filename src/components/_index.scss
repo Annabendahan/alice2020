@@ -1,0 +1,25 @@
+.logo {
+  text-align: center;
+  margin-top: 15%;
+  img {
+    position: fixed;
+  }
+}
+
+.pic {
+  width: 40%;
+  position: relative;
+
+  @include breakpoint(s) {
+    width: 30%;
+  }
+  @include breakpoint(xl) {
+    width: 20%;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s ease-out;
+    z-index: 3;
+  }
+}
