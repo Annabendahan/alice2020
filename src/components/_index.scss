@@ -23,3 +23,76 @@
     z-index: 3;
   }
 }
+
+.photos-global {
+  overflow-y: scroll;
+}
+
+.photos {
+  display: flex;
+  padding: 10%;
+}
+
+.picture {
+  height: 400px;
+  margin: 50px;
+}
+
+.text {
+  font-family: Work Sans;
+  margin: 0% 10%;
+
+  width: 60%;
+  p {
+    color: rgb(65, 65, 65);
+    font-family: work sans;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+}
+
+.part1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.video {
+  text-align: center;
+  padding-top: 10%;
+}
+
+video {
+  width: 90%;
+  @include breakpoint(s) {
+    width: 80%;
+  }
+  @include breakpoint(l) {
+    width: 70%;
+  }
+}
+
+.pres {
+  font-family: work sans;
+  width: 90%;
+  @include breakpoint(s) {
+    width: 80%;
+  }
+  @include breakpoint(l) {
+    width: 70%;
+  }
+  text-align: center;
+  margin: 60px auto;
+  color: map-get($colors, blue);
+  p {
+    color: rgb(65, 65, 65);
+    font-weight: 300;
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}

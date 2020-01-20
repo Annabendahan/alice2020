@@ -9,10 +9,12 @@ const Header = ({ siteTitle }) => (
       display: `flex`,
     }}
   >
-    <h1>ALICE THONNIER</h1>
+    <Link to="/">
+      <h1>ALICE THONNIER</h1>
+    </Link>
     <div className="navs">
       <Link>COLLECTIONS</Link>
-      <Link>ABOUT</Link>
+      <Link to="/about">ABOUT</Link>
     </div>
   </header>
 )

@@ -74,122 +74,138 @@ class IndexPage extends Component {
             transition: "transform 100s ease-out",
           }}
         >
-          <img
-            style={{ position: "absolute", top: "200px", left: "15%" }}
-            src={N2}
-            className="pic"
-            alt=""
-          />
+          <Link to="nina-collection">
+            <img
+              style={{ position: "absolute", top: "200px", left: "15%" }}
+              src={N2}
+              className="pic"
+              alt=""
+            />
+          </Link>
           <br />
+          <Link to="banlieue-x">
+            <img
+              style={{ position: "absolute", right: "5%" }}
+              src={BX7}
+              className="pic"
+              alt=""
+            />
+          </Link>
+          <Link to="banlieue-x">
+            <img
+              style={{
+                position: "absolute",
+                top: "400px",
 
-          <img
-            style={{ position: "absolute", right: "5%" }}
-            src={BX7}
-            className="pic"
-            alt=""
-          />
+                left: `${l}px`,
+              }}
+              src={BX2}
+              className="pic"
+              alt=""
+            />
+          </Link>
 
-          <img
-            style={{
-              position: "absolute",
-              top: "400px",
+          <Link to="heures-de-pointe">
+            {" "}
+            <img
+              style={{
+                position: "absolute",
+                left: "20%",
 
-              left: `${l}px`,
-            }}
-            src={BX2}
-            className="pic"
-            alt=""
-          />
+                top: "1000px",
+              }}
+              src={HDP7}
+              className="pic"
+              alt=""
+            />
+          </Link>
+          <Link to="heures-de-pointe">
+            <img
+              style={{
+                position: "absolute",
+                top: "1300px",
+                left: `${a}px`,
+              }}
+              src={HDP3}
+              className="pic"
+              alt=""
+            />
+          </Link>
+          <Link to="knicks-queens">
+            <img
+              style={{
+                position: "absolute",
+                top: "700px",
+                right: `-2%`,
+              }}
+              src={Q1}
+              className="pic"
+              alt=""
+            />
+          </Link>
+          <Link to="banlieue-x">
+            <img
+              style={{
+                position: "absolute",
+                top: "850px",
+                right: `${l}px`,
+              }}
+              src={BX3}
+              className="pic"
+              alt=""
+            />
+          </Link>
+          <Link to="nina-collection">
+            <img
+              style={{
+                position: "absolute",
+                top: "1500px",
+                right: `40%`,
+              }}
+              src={N3}
+              className="pic"
+              alt=""
+            />
+          </Link>
+          <Link to="banlieue-x">
+            <img
+              style={{
+                position: "absolute",
+                top: "1950px",
 
-          <img
-            style={{
-              position: "absolute",
-              left: "20%",
+                left: `${v}px`,
+              }}
+              src={BX8}
+              className="pic"
+              alt=""
+            />{" "}
+          </Link>
+          <Link to="heures-de-pointe">
+            <img
+              style={{
+                position: "absolute",
+                top: "2000px",
 
-              top: "1000px",
-            }}
-            src={HDP7}
-            className="pic"
-            alt=""
-          />
+                right: "-10px",
+              }}
+              src={HDP6}
+              className="pic"
+              alt=""
+            />
+          </Link>
+          <Link to="heures-de-pointe">
+            <img
+              style={{
+                position: "absolute",
+                top: "1800px",
 
-          <img
-            style={{
-              position: "absolute",
-              top: "1300px",
-              left: `${a}px`,
-            }}
-            src={HDP3}
-            className="pic"
-            alt=""
-          />
-
-          <img
-            style={{
-              position: "absolute",
-              top: "700px",
-              right: `-2%`,
-            }}
-            src={Q1}
-            className="pic"
-            alt=""
-          />
-          <img
-            style={{
-              position: "absolute",
-              top: "850px",
-              right: `${l}px`,
-            }}
-            src={BX3}
-            className="pic"
-            alt=""
-          />
-          <img
-            style={{
-              position: "absolute",
-              top: "1500px",
-              right: `40%`,
-            }}
-            src={N3}
-            className="pic"
-            alt=""
-          />
-
-          <img
-            style={{
-              position: "absolute",
-              top: "1950px",
-
-              left: `${v}px`,
-            }}
-            src={BX8}
-            className="pic"
-            alt=""
-          />
-
-          <img
-            style={{
-              position: "absolute",
-              top: "2000px",
-
-              right: "-10px",
-            }}
-            src={HDP6}
-            className="pic"
-            alt=""
-          />
-
-          <img
-            style={{
-              position: "absolute",
-              top: "1800px",
-
-              right: "10%",
-            }}
-            src={HDP1}
-            className="pic"
-            alt=""
-          />
+                right: "10%",
+              }}
+              src={HDP1}
+              className="pic"
+              alt=""
+            />
+          </Link>
         </div>
       </Layout>
     )

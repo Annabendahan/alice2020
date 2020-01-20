@@ -6,6 +6,9 @@ header {
   position: fixed;
   z-index: 9;
   padding: 2rem 1rem;
+  a {
+    text-decoration: none;
+  }
 }
 
 .navs {
