@@ -621,4 +621,14 @@ pre tt:after {
 }
 
 .layout {
+  padding: 10% 5%;
+  @include breakpoint(s) {
+    padding: 8% 6%;
+  }
+  @include breakpoint(m) {
+    padding: 10% 7%;
+  }
+  @include breakpoint(l) {
+    padding: 12% 8%;
+  }
 }

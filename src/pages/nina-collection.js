@@ -22,6 +22,12 @@ class Nina extends Component {
       }.bind(this),
       100
     )
+    setTimeout(
+      function() {
+        this.setState({ step2: false })
+      }.bind(this),
+      10000
+    )
   }
   render() {
     return (
@@ -34,7 +40,7 @@ class Nina extends Component {
             style={{
               transform: this.state.step2
                 ? "translateX(-2000px)"
-                : "translateX(100px)",
+                : "translateX(0px)",
               transition: "transform 100s ease-out",
             }}
           >

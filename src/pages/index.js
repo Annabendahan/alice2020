@@ -48,6 +48,12 @@ class IndexPage extends Component {
       }.bind(this),
       100
     )
+    setTimeout(
+      function() {
+        this.setState({ step2: false })
+      }.bind(this),
+      40000
+    )
   }
 
   render() {
@@ -70,7 +76,7 @@ class IndexPage extends Component {
             height: "2000px",
             transform: this.state.step2
               ? "translateY(-2000px)"
-              : "translateY(100px)",
+              : "translateY(0px)",
             transition: "transform 100s ease-out",
           }}
         >

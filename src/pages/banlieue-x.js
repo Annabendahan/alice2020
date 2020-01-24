@@ -24,6 +24,12 @@ class Banlieue extends Component {
       }.bind(this),
       100
     )
+    setTimeout(
+      function() {
+        this.setState({ step2: false })
+      }.bind(this),
+      20000
+    )
   }
   render() {
     return (
@@ -36,7 +42,7 @@ class Banlieue extends Component {
             style={{
               transform: this.state.step2
                 ? "translateX(-2000px)"
-                : "translateX(100px)",
+                : "translateX(0px)",
               transition: "transform 100s ease-out",
             }}
           >

@@ -3,19 +3,59 @@ header {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   z-index: 9;
-  padding: 2rem 1rem;
+
+  h1 {
+    margin-bottom: 0px;
+  }
+
   a {
     text-decoration: none;
+  }
+  padding: 3% 5%;
+  @include breakpoint(s) {
+    padding: 4% 6%;
+  }
+  @include breakpoint(m) {
+    padding: 6% 7%;
+  }
+  @include breakpoint(l) {
+    padding: 3% 8%;
+  }
+
+  img {
+    width: 80px;
+    margin-bottom: 0px;
+  }
+}
+
+.coll {
+  position: relative;
+  &:hover > .colld {
+    display: block;
+  }
+}
+
+.colld {
+  position: absolute;
+  width: 300px;
+  display: none;
+  &:hover {
+    display: block;
   }
 }
 
 .navs {
+  display: flex;
   a {
     color: map-get($colors, blue);
     text-decoration: none;
-    margin: 0px 20px;
+    margin-left: 10px;
+    @include breakpoint(s) {
+      margin-left: 25px;
+    }
     font-family: Work Sans;
     font-size: 0.8rem;
   }
