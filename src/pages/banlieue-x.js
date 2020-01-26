@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
+import Popup from "../components/popup"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,10 +15,14 @@ import Text from "../components/text"
 
 class Banlieue extends Component {
   state = {
+    mounted: false,
     step2: false,
+    showPopup: false,
+    img: "",
   }
 
   componentDidMount() {
+    this.setState({ mounted: true })
     setTimeout(
       function() {
         this.setState({ step2: true })
@@ -31,26 +36,70 @@ class Banlieue extends Component {
       20000
     )
   }
+
+  openPopup = src => {
+    this.setState({ showPopup: true, img: src })
+    console.log("cc")
+  }
+
+  closePopup = () => {
+    this.setState({ showPopup: false })
+  }
+
   render() {
     return (
       <Layout>
         <SEO title="Banlieue X" />
+        <div onClick={() => this.closePopup()}>
+          {this.state.showPopup ? <Popup img={this.state.img} /> : null}{" "}
+        </div>
 
-        <div className="photos-global">
+        <div
+          style={{
+            opacity: this.state.mounted ? 1 : 0,
+            transition: "opacity 2s ease-out",
+          }}
+          className="photos-global"
+        >
           <div
             className="photos"
             style={{
               transform: this.state.step2
                 ? "translateX(-2000px)"
                 : "translateX(0px)",
-              transition: "transform 100s ease-out",
+              transition: "transform 200s ease-out",
             }}
           >
-            <img src={BX1} alt="pic" className="picture" />
-            <img src={BX2} alt="pic" className="picture" />
-            <img src={BX3} alt="pic" className="picture" />
-            <img src={BX7} alt="pic" className="picture" />
-            <img src={BX8} alt="pic" className="picture" />
+            <img
+              onClick={() => this.openPopup(BX1)}
+              src={BX1}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(BX2)}
+              src={BX2}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(BX3)}
+              src={BX3}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(BX7)}
+              src={BX7}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(BX8)}
+              src={BX8}
+              alt="pic"
+              className="picture"
+            />
           </div>
         </div>
 

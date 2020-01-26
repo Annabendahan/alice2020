@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
+import Popup from "../components/popup"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,10 +16,14 @@ import Text from "../components/text"
 
 class Knicks extends Component {
   state = {
+    mounted: false,
     step2: false,
+    showPopup: false,
+    img: "",
   }
 
   componentDidMount() {
+    this.setState({ mounted: true })
     setTimeout(
       function() {
         this.setState({ step2: true })
@@ -32,12 +37,29 @@ class Knicks extends Component {
       20000
     )
   }
+  openPopup = src => {
+    this.setState({ showPopup: true, img: src })
+    console.log("cc")
+  }
+
+  closePopup = () => {
+    this.setState({ showPopup: false })
+  }
   render() {
     return (
       <Layout>
-        <SEO title="Heures de pointe" />
+        <SEO title="Knicks Queens" />
+        <div onClick={() => this.closePopup()}>
+          {this.state.showPopup ? <Popup img={this.state.img} /> : null}{" "}
+        </div>
 
-        <div className="photos-global">
+        <div
+          style={{
+            opacity: this.state.mounted ? 1 : 0,
+            transition: "opacity 2s ease-out",
+          }}
+          className="photos-global"
+        >
           <div
             className="photos"
             style={{
@@ -47,12 +69,42 @@ class Knicks extends Component {
               transition: "transform 100s ease-out",
             }}
           >
-            <img src={Q1} alt="pic" className="picture" />
-            <img src={Q2} alt="pic" className="picture" />
-            <img src={Q3} alt="pic" className="picture" />
-            <img src={Q4} alt="pic" className="picture" />
-            <img src={Q5} alt="pic" className="picture" />
-            <img src={Q8} alt="pic" className="picture" />
+            <img
+              onClick={() => this.openPopup(Q1)}
+              src={Q1}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(Q2)}
+              src={Q2}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(Q3)}
+              src={Q3}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(Q4)}
+              src={Q4}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(Q5)}
+              src={Q5}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(Q8)}
+              src={Q8}
+              alt="pic"
+              className="picture"
+            />
           </div>
         </div>
 

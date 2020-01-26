@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
+import Popup from "../components/popup"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,10 +16,14 @@ import Text from "../components/text"
 
 class Heures extends Component {
   state = {
+    mounted: false,
     step2: false,
+    showPopup: false,
+    img: "",
   }
 
   componentDidMount() {
+    this.setState({ mounted: true })
     setTimeout(
       function() {
         this.setState({ step2: true })
@@ -32,12 +37,30 @@ class Heures extends Component {
       20000
     )
   }
+
+  openPopup = src => {
+    this.setState({ showPopup: true, img: src })
+    console.log("cc")
+  }
+
+  closePopup = () => {
+    this.setState({ showPopup: false })
+  }
   render() {
     return (
       <Layout>
         <SEO title="Heures de pointe" />
+        <div onClick={() => this.closePopup()}>
+          {this.state.showPopup ? <Popup img={this.state.img} /> : null}{" "}
+        </div>
 
-        <div className="photos-global">
+        <div
+          style={{
+            opacity: this.state.mounted ? 1 : 0,
+            transition: "opacity 2s ease-out",
+          }}
+          className="photos-global"
+        >
           <div
             className="photos"
             style={{
@@ -47,13 +70,48 @@ class Heures extends Component {
               transition: "transform 100s ease-out",
             }}
           >
-            <img src={HDP1} alt="pic" className="picture" />
-            <img src={HDP7} alt="pic" className="picture" />
-            <img src={HDP6} alt="pic" className="picture" />
-            <img src={HDP3} alt="pic" className="picture" />
-            <img src={HDP4} alt="pic" className="picture" />
-            <img src={HDP8} alt="pic" className="picture" />
-            <img src={HDP5} alt="pic" className="picture" />
+            <img
+              onClick={() => this.openPopup(HDP1)}
+              src={HDP1}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(HDP7)}
+              src={HDP7}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(HDP6)}
+              src={HDP6}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(HDP3)}
+              src={HDP3}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(HDP4)}
+              src={HDP4}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(HDP8)}
+              src={HDP8}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(HDP5)}
+              src={HDP5}
+              alt="pic"
+              className="picture"
+            />
           </div>
         </div>
 

@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
+import Popup from "../components/popup"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,10 +13,14 @@ import Text from "../components/text"
 
 class Nina extends Component {
   state = {
+    mounted: false,
     step2: false,
+    showPopup: false,
+    img: "",
   }
 
   componentDidMount() {
+    this.setState({ mounted: true })
     setTimeout(
       function() {
         this.setState({ step2: true })
@@ -29,24 +34,58 @@ class Nina extends Component {
       10000
     )
   }
+
+  openPopup = src => {
+    this.setState({ showPopup: true, img: src })
+    console.log("cc")
+  }
+
+  closePopup = () => {
+    this.setState({ showPopup: false })
+  }
   render() {
     return (
       <Layout>
         <SEO title="Nina Collection" />
+        <div onClick={() => this.closePopup()}>
+          {this.state.showPopup ? <Popup img={this.state.img} /> : null}{" "}
+        </div>
 
-        <div className="photos-global">
+        <div
+          style={{
+            opacity: this.state.mounted ? 1 : 0,
+            transition: "opacity 2s ease-out",
+          }}
+          className="photos-global"
+        >
           <div
             className="photos"
             style={{
               transform: this.state.step2
                 ? "translateX(-2000px)"
                 : "translateX(0px)",
-              transition: "transform 100s ease-out",
+              transition: "transform 200s ease-out",
             }}
           >
-            <img src={N1} alt="pic" className="picture" />
-            <img src={N2} alt="pic" className="picture" />
-            <img src={N3} alt="pic" className="picture" />
+            <img
+              onClick={() => this.openPopup(N1)}
+              src={N1}
+              alt="pic"
+              className="picture"
+            />
+
+            <img
+              onClick={() => this.openPopup(N2)}
+              src={N2}
+              alt="pic"
+              className="picture"
+            />
+            <img
+              onClick={() => this.openPopup(N3)}
+              src={N3}
+              alt="pic"
+              className="picture"
+            />
           </div>
         </div>
 

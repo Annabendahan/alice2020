@@ -64,7 +64,7 @@ class IndexPage extends Component {
     let l = this.state.l
     return (
       <Layout>
-        <SEO title="Home" />
+        <SEO title="Accueil" />
         {/* <div className="logo">
           <img src={logo} alt="" />
         </div> */}
