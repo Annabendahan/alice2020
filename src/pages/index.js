@@ -125,14 +125,14 @@ class IndexPage extends Component {
               alt=""
             />
           </Link>
-          <Link to="heures-de-pointe">
+          <Link to="banlieue-x">
             <img
               style={{
                 position: "absolute",
                 top: "1300px",
                 left: `${a}px`,
               }}
-              src={HDP3}
+              src={BX3}
               className="pic"
               alt=""
             />
@@ -142,21 +142,21 @@ class IndexPage extends Component {
               style={{
                 position: "absolute",
                 top: "700px",
-                right: `-2%`,
+                right: `${l}px`,
               }}
               src={Q1}
               className="pic"
               alt=""
             />
           </Link>
-          <Link to="banlieue-x">
+          <Link to="heures-de-pointe">
             <img
               style={{
                 position: "absolute",
-                top: "850px",
-                right: `${l}px`,
+                top: "500px",
+                right: "20%",
               }}
-              src={BX3}
+              src={HDP3}
               className="pic"
               alt=""
             />
