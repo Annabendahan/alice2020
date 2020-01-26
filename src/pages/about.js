@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import Loader from "react-loader-spinner"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
