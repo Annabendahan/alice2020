@@ -10,7 +10,10 @@ header {
 
   h1 {
     margin-bottom: 0px;
-    font-family: modern sans;
+    @font-face {
+      font-family: modern sans;
+      src: url("https://www.dafont.com/fr/modern-sans.font");
+    }
   }
 
   a {
