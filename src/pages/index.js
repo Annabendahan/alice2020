@@ -17,6 +17,7 @@ import HDP3 from "../images/sitealice/HDP3.png"
 import backstage from "../images/sitealice/backstage.mp4"
 import Q1 from "../images/sitealice/Q1.png"
 import N3 from "../images/sitealice/N3.jpg"
+import N1 from "../images/sitealice/N1.png"
 
 class IndexPage extends Component {
   state = {
@@ -24,8 +25,8 @@ class IndexPage extends Component {
     p: 0,
     a: 200,
     c: 400,
-    v: -50,
-    l: -50,
+    v: -200,
+    l: -100,
 
     step2: false,
   }
@@ -52,7 +53,7 @@ class IndexPage extends Component {
       function() {
         this.setState({ step2: false })
       }.bind(this),
-      40000
+      45000
     )
   }
 
@@ -76,7 +77,7 @@ class IndexPage extends Component {
             height: "2000px",
             transform: this.state.step2
               ? "translateY(-2000px)"
-              : "translateY(0px)",
+              : "translateY(300px)",
             transition: "transform 100s ease-out",
           }}
         >
@@ -116,7 +117,7 @@ class IndexPage extends Component {
             <img
               style={{
                 position: "absolute",
-                left: "20%",
+                left: "10%",
 
                 top: "1000px",
               }}
@@ -130,7 +131,7 @@ class IndexPage extends Component {
               style={{
                 position: "absolute",
                 top: "1300px",
-                left: `${a}px`,
+                left: `0%`,
               }}
               src={BX3}
               className="pic"
@@ -142,7 +143,7 @@ class IndexPage extends Component {
               style={{
                 position: "absolute",
                 top: "700px",
-                right: `${l}px`,
+                right: `-10%`,
               }}
               src={Q1}
               className="pic"
@@ -169,6 +170,18 @@ class IndexPage extends Component {
                 right: `40%`,
               }}
               src={N3}
+              className="pic"
+              alt=""
+            />
+          </Link>
+          <Link to="nina-collection">
+            <img
+              style={{
+                position: "absolute",
+                top: "1300px",
+                right: `${a}px`,
+              }}
+              src={N1}
               className="pic"
               alt=""
             />

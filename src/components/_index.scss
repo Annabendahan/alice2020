@@ -7,7 +7,7 @@
 }
 
 .pic {
-  width: 40%;
+  width: 45%;
   position: relative;
 
   @include breakpoint(s) {
@@ -52,7 +52,7 @@
 }
 
 .text {
-  font-family: Work Sans;
+  font-family: modern sans;
   width: 100%;
   margin-bottom: 120px;
   @include breakpoint(xxl) {
@@ -61,7 +61,7 @@
 
   p {
     color: rgb(65, 65, 65);
-    font-family: work sans;
+    font-family: modern sans;
     font-weight: 300;
     font-size: 0.9rem;
     text-align: justify;
@@ -98,7 +98,7 @@ video {
 }
 
 .pres {
-  font-family: work sans;
+  font-family: modern sans;
   width: 100%;
 
   text-align: center;
@@ -133,5 +133,11 @@ video {
   img {
     max-height: 80%;
     max-width: 80%;
+  }
+}
+
+.socials {
+  a {
+    margin: 7px;
   }
 }

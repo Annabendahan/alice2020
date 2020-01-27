@@ -35,11 +35,7 @@ const Layout = ({ children }) => {
           }}
         >
           {" "}
-          Alice Thonnier © Tous droits réservés - Site créé par{" "}
-          <a href="http://annabdh.com" target="blank">
-            {" "}
-            Anna Bendahan{" "}
-          </a>
+          Alice Thonnier © Tous droits réservés - Site créé par Anna Bendahan{" "}
         </footer>
       </div>
     </>
