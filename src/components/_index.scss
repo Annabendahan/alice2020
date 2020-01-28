@@ -11,9 +11,13 @@
   position: relative;
 
   @include breakpoint(s) {
-    width: 30%;
+    width: 35%;
   }
   @include breakpoint(xl) {
+    width: 25%;
+  }
+
+  @include breakpoint(xxl) {
     width: 20%;
   }
 
@@ -27,6 +31,9 @@
 .photos-global {
   overflow-y: scroll;
   margin: 30px 0px 80px 0px;
+  @include breakpoint(m) {
+    margin-top: -60px;
+  }
 }
 
 .photos {
@@ -43,8 +50,13 @@
 .picture {
   height: 400px;
   margin: 40px;
+  object-fit: cover;
   @include breakpoint(s) {
-    margin: 20px;
+    margin: 60px;
+  }
+  @include breakpoint(l) {
+    margin: 80px;
+    height: 500px;
   }
   &:hover {
     cursor: pointer;

@@ -26,7 +26,8 @@ class IndexPage extends Component {
     a: 200,
     c: 400,
     v: -200,
-    l: -100,
+    l: 100,
+    e: -50,
 
     step2: false,
   }
@@ -39,7 +40,15 @@ class IndexPage extends Component {
         let c = this.state.c
         let v = this.state.v
         let l = this.state.l
-        this.setState({ p: p - 1, a: a - 1, c: c - 1, v: v + 1, l: l + 1 })
+        let e = this.state.e
+        this.setState({
+          p: p - 1,
+          a: a - 1,
+          c: c - 1,
+          v: v + 1,
+          l: l - 1,
+          e: e + 1,
+        })
       }.bind(this),
       100
     )
@@ -63,6 +72,7 @@ class IndexPage extends Component {
     let c = this.state.c
     let v = this.state.v
     let l = this.state.l
+    let e = this.state.e
     return (
       <Layout>
         <SEO title="Accueil" />
@@ -83,7 +93,7 @@ class IndexPage extends Component {
         >
           <Link to="nina-collection">
             <img
-              style={{ position: "absolute", top: "200px", left: "15%" }}
+              style={{ position: "absolute", top: "200px", left: "5%" }}
               src={N2}
               className="pic"
               alt=""
@@ -92,7 +102,7 @@ class IndexPage extends Component {
           <br />
           <Link to="banlieue-x">
             <img
-              style={{ position: "absolute", right: "5%" }}
+              style={{ position: "absolute", right: `${e}px` }}
               src={BX7}
               className="pic"
               alt=""
@@ -102,7 +112,7 @@ class IndexPage extends Component {
             <img
               style={{
                 position: "absolute",
-                top: "400px",
+                top: "600px",
 
                 left: `${l}px`,
               }}
@@ -117,9 +127,9 @@ class IndexPage extends Component {
             <img
               style={{
                 position: "absolute",
-                left: "10%",
+                left: `${e}px`,
 
-                top: "1000px",
+                top: "1500px",
               }}
               src={HDP7}
               className="pic"
@@ -130,8 +140,8 @@ class IndexPage extends Component {
             <img
               style={{
                 position: "absolute",
-                top: "1300px",
-                left: `0%`,
+                top: "1700px",
+                left: `-10%`,
               }}
               src={BX3}
               className="pic"
@@ -142,7 +152,7 @@ class IndexPage extends Component {
             <img
               style={{
                 position: "absolute",
-                top: "700px",
+                top: "1100px",
                 right: `-10%`,
               }}
               src={Q1}
@@ -154,7 +164,7 @@ class IndexPage extends Component {
             <img
               style={{
                 position: "absolute",
-                top: "500px",
+                top: "800px",
                 right: "20%",
               }}
               src={HDP3}
@@ -166,7 +176,7 @@ class IndexPage extends Component {
             <img
               style={{
                 position: "absolute",
-                top: "1500px",
+                top: "2500px",
                 right: `40%`,
               }}
               src={N3}
@@ -178,7 +188,7 @@ class IndexPage extends Component {
             <img
               style={{
                 position: "absolute",
-                top: "1300px",
+                top: "1700px",
                 right: `${a}px`,
               }}
               src={N1}
@@ -190,7 +200,7 @@ class IndexPage extends Component {
             <img
               style={{
                 position: "absolute",
-                top: "1950px",
+                top: "2950px",
 
                 left: `${v}px`,
               }}
@@ -203,7 +213,7 @@ class IndexPage extends Component {
             <img
               style={{
                 position: "absolute",
-                top: "2000px",
+                top: "3100px",
 
                 right: "-10px",
               }}
@@ -216,7 +226,7 @@ class IndexPage extends Component {
             <img
               style={{
                 position: "absolute",
-                top: "1800px",
+                top: "2800px",
 
                 right: "10%",
               }}

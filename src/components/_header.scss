@@ -11,7 +11,7 @@ header {
   h1 {
     margin-bottom: 0px;
     font-family: "Metrophobic", sans-serif;
-    max-width: 100px;
+    max-width: 120px;
     @include breakpoint(s) {
       max-width: unset;
     }
