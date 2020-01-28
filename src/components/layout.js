@@ -28,16 +28,20 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="layout">
         <main>{children}</main>
-        <footer
-          style={{
-            fontFamily: "Work sans",
-            fontSize: "0.7rem",
-            marginTop: "200px",
-          }}
-        >
-          {" "}
-          Alice Thonnier © Tous droits réservés - Site créé par Anna Bendahan{" "}
-        </footer>
+        {children[0].props.title !== "Accueil" ? (
+          <footer
+            style={{
+              fontFamily: "Work sans",
+              fontSize: "0.7rem",
+              marginTop: "200px",
+            }}
+          >
+            {" "}
+            Alice Thonnier © Tous droits réservés - Site créé par Anna Bendahan{" "}
+          </footer>
+        ) : (
+          ""
+        )}
       </div>
     </>
   )

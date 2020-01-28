@@ -62,7 +62,7 @@ class IndexPage extends Component {
       function() {
         this.setState({ step2: false })
       }.bind(this),
-      45000
+      25000
     )
   }
 
