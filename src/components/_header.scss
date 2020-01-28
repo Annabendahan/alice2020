@@ -35,6 +35,7 @@ header {
 
 .coll {
   position: relative;
+  margin-top: -1px;
   &:hover > .colld {
     display: block;
   }
