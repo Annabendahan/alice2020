@@ -52,7 +52,7 @@
 }
 
 .text {
-  font-family: modern sans;
+  font-family: "Metrophobic", sans-serif;
   width: 100%;
   margin-bottom: 120px;
   @include breakpoint(xxl) {
@@ -61,8 +61,8 @@
 
   p {
     color: rgb(65, 65, 65);
-    font-family: modern sans;
-    font-weight: 300;
+    font-family: Work Sans;
+    font-weight: 200;
     font-size: 0.9rem;
     text-align: justify;
   }
@@ -98,7 +98,7 @@ video {
 }
 
 .pres {
-  font-family: modern sans;
+  font-family: "Metrophobic", sans-serif;
   width: 100%;
 
   text-align: center;
@@ -109,6 +109,7 @@ video {
     font-weight: 300;
     font-size: 0.9rem;
     text-align: justify;
+    font-family: Work Sans;
   }
 }
 

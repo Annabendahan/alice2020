@@ -32,6 +32,7 @@ const Layout = ({ children }) => {
           style={{
             fontFamily: "Work sans",
             fontSize: "0.7rem",
+            marginTop: "200px",
           }}
         >
           {" "}

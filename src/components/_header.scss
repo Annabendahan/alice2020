@@ -3,17 +3,14 @@ header {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  font-family: modern sans;
+  font-family: "Metrophobic", sans-serif;
   align-items: center;
   position: fixed;
   z-index: 9;
 
   h1 {
     margin-bottom: 0px;
-    @font-face {
-      font-family: modern sans;
-      src: url("https://www.dafont.com/fr/modern-sans.font");
-    }
+    font-family: "Metrophobic", sans-serif;
   }
 
   a {
@@ -61,8 +58,8 @@ header {
     @include breakpoint(s) {
       margin-left: 25px;
     }
-    font-family: modern sans;
-    font-weight: 800;
+    font-family: "Metrophobic", sans-serif;
+    font-weight: 400;
     font-size: 0.8rem;
   }
 }

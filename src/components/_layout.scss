@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Metrophobic|Work+Sans:300,400,500,600,700&display=swap");
 @import url("https://www.dafont.com/fr/modern-sans.font");
 
 html {
@@ -233,7 +233,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: map-get($colors, blue);
-  font-family: modern sans;
+  font-family: "Metrophobic", sans-serif;
   font-weight: 600;
   text-rendering: optimizeLegibility;
   font-size: 1.1rem;
@@ -249,8 +249,8 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: modern sans;
-  font-weight: bold;
+  font-family: "Metrophobic", sans-serif;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
   line-height: 1.1;
@@ -265,8 +265,8 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: map-get($colors, blue);
-  font-family: modern sans;
-  font-weight: 800;
+  font-family: "Metrophobic", sans-serif;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
   line-height: 1.1;
@@ -281,8 +281,8 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: map-get($colors, blue);
-  font-family: modern sans;
-  font-weight: 800;
+  font-family: "Metrophobic", sans-serif;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   line-height: 1.1;
