@@ -17,9 +17,11 @@ import Text from "../components/text"
 class Heures extends Component {
   state = {
     mounted: false,
+    mounted2: false,
+    mounted3: false,
     step2: false,
     showPopup: false,
-    img: "",
+    img: 1,
   }
 
   componentDidMount() {
@@ -32,107 +34,94 @@ class Heures extends Component {
     )
     setTimeout(
       function() {
+        this.setState({ mounted2: true })
+      }.bind(this),
+      500
+    )
+    setTimeout(
+      function() {
+        this.setState({ mounted3: true })
+      }.bind(this),
+      1000
+    )
+    setTimeout(
+      function() {
         this.setState({ step2: false })
       }.bind(this),
       20000
     )
   }
 
-  openPopup = src => {
-    this.setState({ showPopup: true, img: src })
-    console.log("cc")
+  resetCount = () => {
+    this.setState({ img: 1 })
   }
 
-  closePopup = () => {
-    this.setState({ showPopup: false })
+  showNextPic = () => {
+    this.setState({ img: this.state.img + 1 })
   }
+
   render() {
+    let img = <img src={HDP7} alt="pic" className="picture" />
+
+    if (this.state.img === 2) {
+      img = <img src={HDP8} alt="pic" className="picture" />
+    } else if (this.state.img === 3) {
+      img = <img src={HDP6} alt="pic" className="picture" />
+    } else if (this.state.img === 4) {
+      img = <img src={HDP3} alt="pic" className="picture" />
+    } else if (this.state.img === 5) {
+      img = <img src={HDP4} alt="pic" className="picture" />
+    } else if (this.state.img === 6) {
+      img = <img src={HDP1} alt="pic" className="picture" />
+    } else if (this.state.img === 7) {
+      img = <img src={HDP5} alt="pic" className="picture" />
+    } else if (this.state.img === 8) {
+      this.resetCount()
+    }
     return (
       <Layout>
         <SEO title="Heures de pointe" />
-        <div onClick={() => this.closePopup()}>
-          {this.state.showPopup ? <Popup img={this.state.img} /> : null}{" "}
-        </div>
 
         <div
+          onClick={() => this.showNextPic()}
+          className="pics"
           style={{
+            transform: this.state.mounted
+              ? "translateY(0)"
+              : "translateY(50vh)",
+            transition: ".4s all .7s ease-out",
             opacity: this.state.mounted ? 1 : 0,
-            transition: "opacity 2s ease-out",
+            width: "100%",
           }}
-          className="photos-global"
         >
+          <div style={{ textAlign: "center" }}> {img}</div>
+
           <div
-            className="photos"
             style={{
-              transform: this.state.step2
-                ? "translateX(-2000px)"
-                : "translateX(0px)",
-              transition: "transform 100s ease-out",
+              opacity: this.state.mounted3 ? 1 : 0,
+              transition: "all 1s ease-out",
             }}
           >
-            <img
-              onClick={() => this.openPopup(HDP1)}
-              src={HDP1}
-              alt="pic"
-              className="picture"
-            />
-            <img
-              onClick={() => this.openPopup(HDP7)}
-              src={HDP7}
-              alt="pic"
-              className="picture"
-            />
-            <img
-              onClick={() => this.openPopup(HDP6)}
-              src={HDP6}
-              alt="pic"
-              className="picture"
-            />
-            <img
-              onClick={() => this.openPopup(HDP3)}
-              src={HDP3}
-              alt="pic"
-              className="picture"
-            />
-            <img
-              onClick={() => this.openPopup(HDP4)}
-              src={HDP4}
-              alt="pic"
-              className="picture"
-            />
-            <img
-              onClick={() => this.openPopup(HDP8)}
-              src={HDP8}
-              alt="pic"
-              className="picture"
-            />
-            <img
-              onClick={() => this.openPopup(HDP5)}
-              src={HDP5}
-              alt="pic"
-              className="picture"
-            />
-          </div>
-        </div>
-
-        <Text
-          title="HEURES DE POINTE"
-          date="2018"
-          desc=" Heures de Pointe est une collection unisexe inspirée du métro aux Heures
+            <Text
+              title="HEURES DE POINTE"
+              date="2018"
+              desc=" Heures de Pointe est une collection unisexe inspirée du métro aux Heures
         les plus fréquentées. Le concept de la collection est de fusionner des
         vêtements de personnes positionnées côte à côte pour obtenir des
         vêtements à pluri-apparence."
-          t1="DESIGNER"
-          n1="ALICE THONNIER"
-          t2="PHOTOGRAPHER"
-          n2="CARA PHOTOGRAPHIES"
-          t3="MODEL"
-          n3="MONIQUE ANDREW / ARNAUD PAGNARO "
-          t4="MAKE UP"
-          n4="MARIA M ZOLA"
-          t5="STUDIO -"
-          n5="STUDIO VALMY"
-        />
+              t1="DESIGNER"
+              n1="ALICE THONNIER"
+              t2="PHOTOGRAPHER"
+              n2="CARA PHOTOGRAPHIES"
+              t3="MODEL"
+              n3="MONIQUE ANDREW / ARNAUD PAGNARO "
+              t4="MAKE UP"
+              n4="MARIA M ZOLA"
+              t5="STUDIO -"
+              n5="STUDIO VALMY"
+            />{" "}
+          </div>
+        </div>
       </Layout>
     )
   }

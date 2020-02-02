@@ -17,9 +17,11 @@ import Text from "../components/text"
 class Knicks extends Component {
   state = {
     mounted: false,
+    mounted2: false,
+    mounted3: false,
     step2: false,
     showPopup: false,
-    img: "",
+    img: 1,
   }
 
   componentDidMount() {
@@ -32,95 +34,85 @@ class Knicks extends Component {
     )
     setTimeout(
       function() {
+        this.setState({ mounted2: true })
+      }.bind(this),
+      500
+    )
+    setTimeout(
+      function() {
+        this.setState({ mounted3: true })
+      }.bind(this),
+      1000
+    )
+    setTimeout(
+      function() {
         this.setState({ step2: false })
       }.bind(this),
       20000
     )
   }
-  openPopup = src => {
-    this.setState({ showPopup: true, img: src })
-    console.log("cc")
+  resetCount = () => {
+    this.setState({ img: 1 })
   }
 
-  closePopup = () => {
-    this.setState({ showPopup: false })
+  showNextPic = () => {
+    this.setState({ img: this.state.img + 1 })
   }
   render() {
+    let img = <img src={Q1} alt="pic" className="picture" />
+
+    if (this.state.img === 2) {
+      img = <img src={Q2} alt="pic" className="picture" />
+    } else if (this.state.img === 3) {
+      img = <img src={Q3} alt="pic" className="picture" />
+    } else if (this.state.img === 4) {
+      img = <img src={Q4} alt="pic" className="picture" />
+    } else if (this.state.img === 5) {
+      img = <img src={Q5} alt="pic" className="picture" />
+    } else if (this.state.img === 6) {
+      img = <img src={Q8} alt="pic" className="picture" />
+    } else if (this.state.img === 7) {
+      this.resetCount()
+    }
     return (
       <Layout>
         <SEO title="Knicks Queens" />
-        <div onClick={() => this.closePopup()}>
-          {this.state.showPopup ? <Popup img={this.state.img} /> : null}{" "}
-        </div>
 
         <div
+          className="pics"
+          onClick={() => this.showNextPic()}
           style={{
+            transform: this.state.mounted
+              ? "translateY(0)"
+              : "translateY(50vh)",
+            transition: ".4s all .7s ease-out",
             opacity: this.state.mounted ? 1 : 0,
-            transition: "opacity 2s ease-out",
+            width: "100%",
           }}
-          className="photos-global"
         >
+          <div style={{ textAlign: "center" }}> {img}</div>
+
           <div
-            className="photos"
             style={{
-              transform: this.state.step2
-                ? "translateX(-2000px)"
-                : "translateX(0px)",
-              transition: "transform 100s ease-out",
+              opacity: this.state.mounted3 ? 1 : 0,
+              transition: "all 1s ease-out",
             }}
           >
-            <img
-              onClick={() => this.openPopup(Q1)}
-              src={Q1}
-              alt="pic"
-              className="picture"
-            />
-            <img
-              onClick={() => this.openPopup(Q2)}
-              src={Q2}
-              alt="pic"
-              className="picture"
-            />
-            <img
-              onClick={() => this.openPopup(Q3)}
-              src={Q3}
-              alt="pic"
-              className="picture"
-            />
-            <img
-              onClick={() => this.openPopup(Q4)}
-              src={Q4}
-              alt="pic"
-              className="picture"
-            />
-            <img
-              onClick={() => this.openPopup(Q5)}
-              src={Q5}
-              alt="pic"
-              className="picture"
-            />
-            <img
-              onClick={() => this.openPopup(Q8)}
-              src={Q8}
-              alt="pic"
-              className="picture"
+            <Text
+              title="KNICKS QUEENS"
+              date="2018"
+              desc="Knicks Queens est une collection de mode inspirée du monde du basketball . Elle rappelle les couleurs de l’équipe des Knicks Queens, le bleu, le orange et le blanc. Le sweat en résille fait écho aux filets et aux grillages des terrains de basket de rue américains. Les poches rondes sur la veste et le pantalon rappellent la forme du ballon de basket."
+              t1="DESIGNER"
+              n1="ALICE THONNIER - HELOISE SAUVET - MARINE FOURNIER - ROXANE DE KORODY"
+              t2="PHOTOGRAPHER"
+              n2=" ROXANE DE KORODY"
+              t3="MODEL"
+              n3="ATHENA LISNYJ "
+              t4="PLACE"
+              n4="PIGALLE BASKETBALL"
             />
           </div>
         </div>
-
-        <Text
-          title="KNICKS QUEENS"
-          date="2018"
-          desc="Knicks Queens est une collection de mode inspirée du monde du basketball . Elle rappelle les couleurs de l’équipe des Knicks Queens, le bleu, le orange et le blanc. Le sweat en résille fait écho aux filets et aux grillages des terrains de basket de rue américains. Les poches rondes sur la veste et le pantalon rappellent la forme du ballon de basket."
-          t1="DESIGNER"
-          n1="ALICE THONNIER - HELOISE SAUVET - MARINE FOURNIER - ROXANE DE KORODY"
-          t2="PHOTOGRAPHER"
-          n2=" ROXANE DE KORODY"
-          t3="MODEL"
-          n3="ATHENA LISNYJ "
-          t4="PLACE"
-          n4="PIGALLE BASKETBALL"
-        />
       </Layout>
     )
   }

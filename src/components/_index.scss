@@ -49,14 +49,24 @@
 
 .picture {
   height: 400px;
-  margin: 40px;
+  z-index: -1;
+  position: relative;
+
+  margin: 100px auto;
   object-fit: cover;
   @include breakpoint(s) {
-    margin: 60px;
+    margin: 70px auto;
+    height: 500px;
   }
   @include breakpoint(l) {
-    margin: 80px;
-    height: 500px;
+    margin: 50px auto;
+    margin-bottom: 80px;
+    height: 700px;
+  }
+  @include breakpoint(xl) {
+    margin: 0px auto;
+    margin-bottom: 50px;
+    height: 700px;
   }
   &:hover {
     cursor: pointer;
@@ -152,5 +162,34 @@ video {
 .socials {
   a {
     margin: 7px;
+  }
+}
+
+.pics {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.landing {
+  position: fixed;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+  z-index: 15;
+  background: white;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  img {
+    width: 100px;
+    margin-top: 40%;
+    @include breakpoint(m) {
+      margin-top: 20%;
+    }
   }
 }
