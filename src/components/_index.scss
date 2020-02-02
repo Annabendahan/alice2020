@@ -65,7 +65,8 @@
   }
   @include breakpoint(xl) {
     margin: 0px auto;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    margin-top: -30px;
     height: 700px;
   }
   &:hover {

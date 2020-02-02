@@ -14,6 +14,7 @@ import HDP7 from "../images/sitealice/HDP7.jpg"
 import HDP1 from "../images/sitealice/HDP1.png"
 import HDP6 from "../images/sitealice/HDP6.png"
 import HDP3 from "../images/sitealice/HDP3.png"
+import HDP8 from "../images/sitealice/HDP8.png"
 import backstage from "../images/sitealice/backstage.mp4"
 import Q1 from "../images/sitealice/Q1.png"
 import N3 from "../images/sitealice/N3.jpg"
@@ -113,7 +114,7 @@ class IndexPage extends Component {
               transform: this.state.step2
                 ? "translateY(-2000px)"
                 : "translateY(300px)",
-              transition: "transform 30s ease-out",
+              transition: "transform 100s ease-out",
             }}
           >
             <Link to="nina-collection">
@@ -129,6 +130,20 @@ class IndexPage extends Component {
               <img
                 style={{ position: "absolute", right: `100px` }}
                 src={BX7}
+                className="pic"
+                alt=""
+              />
+            </Link>
+            <Link to="heures-de-pointe">
+              {" "}
+              <img
+                style={{
+                  position: "absolute",
+                  right: `20%`,
+
+                  top: "400px",
+                }}
+                src={HDP8}
                 className="pic"
                 alt=""
               />
@@ -152,7 +167,7 @@ class IndexPage extends Component {
               <img
                 style={{
                   position: "absolute",
-                  left: `20%`,
+                  left: `30%`,
 
                   top: "1500px",
                 }}
@@ -190,7 +205,7 @@ class IndexPage extends Component {
                 style={{
                   position: "absolute",
                   top: "800px",
-                  right: "20%",
+                  left: "20%",
                 }}
                 src={HDP3}
                 className="pic"
