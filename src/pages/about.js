@@ -10,7 +10,7 @@ const About = () => (
   <Layout>
     <SEO title="About" />
     <div className="video">
-      <video controls>
+      <video className="asafvid" playsInline autoPlay loop muted>
         <source src={video} type="video/mp4" />
       </video>
       <div className="pres">
