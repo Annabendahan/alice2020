@@ -56,12 +56,12 @@ class Nina extends Component {
     this.setState({ img: this.state.img + 1 })
   }
   render() {
-    let img = <img src={N1} alt="pic" className="picture" />
+    let img = <img src={N3} alt="pic" className="picture" />
 
     if (this.state.img === 2) {
       img = <img src={N2} alt="pic" className="picture" />
     } else if (this.state.img === 3) {
-      img = <img src={N3} alt="pic" className="picture" />
+      img = <img src={N1} alt="pic" className="picture" />
     } else if (this.state.img === 4) {
       this.resetCount()
     }
