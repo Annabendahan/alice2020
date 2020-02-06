@@ -6,12 +6,57 @@
   }
 }
 
-.pic {
-  width: 45%;
+.pic1 {
+  width: 60%;
   position: relative;
 
   @include breakpoint(s) {
+    width: 40%;
+  }
+  @include breakpoint(xl) {
     width: 35%;
+  }
+
+  @include breakpoint(xxl) {
+    width: 30%;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s ease-out;
+    z-index: 3;
+  }
+}
+
+.pic2 {
+  width: 50%;
+  position: relative;
+
+  @include breakpoint(s) {
+    width: 30%;
+  }
+  @include breakpoint(xl) {
+    width: 25%;
+  }
+
+  @include breakpoint(xxl) {
+    width: 25%;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s ease-out;
+    z-index: 3;
+  }
+}
+
+.pic3 {
+  width: 40%;
+  position: relative;
+
+  @include breakpoint(s) {
+    position: absolute;
+    width: 30%;
   }
   @include breakpoint(xl) {
     width: 25%;
@@ -193,4 +238,14 @@ video {
       margin-top: 20%;
     }
   }
+}
+
+.all {
+  @include breakpoint(m) {
+    display: block;
+  }
+}
+
+.allphone {
+  display: none;
 }

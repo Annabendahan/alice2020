@@ -72,12 +72,6 @@ class IndexPage extends Component {
       }.bind(this),
       2500
     )
-    setTimeout(
-      function() {
-        this.setState({ step2: false })
-      }.bind(this),
-      20000
-    )
   }
 
   render() {
@@ -110,27 +104,27 @@ class IndexPage extends Component {
             className="all"
             style={{
               width: "100%",
-              height: "2000px",
+              height: "3000px",
               transform: this.state.step2
                 ? "translateY(-2000px)"
-                : "translateY(300px)",
-              transition: "transform 100s ease-out",
+                : "translateY(0px)",
+              transition: "transform 300s ease-out",
             }}
           >
             <Link to="nina-collection">
               <img
-                style={{ position: "absolute", top: "200px", left: "5%" }}
+                style={{ position: "absolute", top: "250px", left: "0%" }}
                 src={N2}
-                className="pic"
+                className="pic pic1"
                 alt=""
               />
             </Link>
             <br />
             <Link to="banlieue-x">
               <img
-                style={{ position: "absolute", right: `100px` }}
+                style={{ position: "absolute", right: `-5%` }}
                 src={BX7}
-                className="pic"
+                className="pic pic1"
                 alt=""
               />
             </Link>
@@ -139,12 +133,12 @@ class IndexPage extends Component {
               <img
                 style={{
                   position: "absolute",
-                  right: `20%`,
+                  left: `-5%`,
 
-                  top: "400px",
+                  top: "4500px",
                 }}
                 src={HDP8}
-                className="pic"
+                className="pic pic2"
                 alt=""
               />
             </Link>
@@ -152,12 +146,12 @@ class IndexPage extends Component {
               <img
                 style={{
                   position: "absolute",
-                  top: "700px",
+                  top: "1500px",
 
                   left: `-10%`,
                 }}
                 src={BX2}
-                className="pic"
+                className="pic pic1"
                 alt=""
               />
             </Link>
@@ -167,12 +161,12 @@ class IndexPage extends Component {
               <img
                 style={{
                   position: "absolute",
-                  left: `30%`,
+                  left: `25%`,
 
-                  top: "1500px",
+                  top: "4200px",
                 }}
                 src={HDP7}
-                className="pic"
+                className="pic pic2"
                 alt=""
               />
             </Link>
@@ -180,11 +174,11 @@ class IndexPage extends Component {
               <img
                 style={{
                   position: "absolute",
-                  top: "1700px",
+                  top: "2700px",
                   left: `10%`,
                 }}
                 src={BX3}
-                className="pic"
+                className="pic pic1"
                 alt=""
               />
             </Link>
@@ -196,7 +190,7 @@ class IndexPage extends Component {
                   right: `-10%`,
                 }}
                 src={Q1}
-                className="pic"
+                className="pic pic3"
                 alt=""
               />
             </Link>
@@ -208,7 +202,7 @@ class IndexPage extends Component {
                   left: "20%",
                 }}
                 src={HDP3}
-                className="pic"
+                className="pic pic2"
                 alt=""
               />
             </Link>
@@ -220,7 +214,7 @@ class IndexPage extends Component {
                   right: `40%`,
                 }}
                 src={N3}
-                className="pic"
+                className="pic pic2"
                 alt=""
               />
             </Link>
@@ -232,7 +226,7 @@ class IndexPage extends Component {
                   right: `10px`,
                 }}
                 src={N1}
-                className="pic"
+                className="pic pic1"
                 alt=""
               />
             </Link>
@@ -240,12 +234,12 @@ class IndexPage extends Component {
               <img
                 style={{
                   position: "absolute",
-                  top: "2850px",
+                  top: "3250px",
 
-                  left: `20px`,
+                  left: `-10%`,
                 }}
                 src={BX8}
-                className="pic"
+                className="pic pic1"
                 alt=""
               />{" "}
             </Link>
@@ -253,12 +247,12 @@ class IndexPage extends Component {
               <img
                 style={{
                   position: "absolute",
-                  top: "2900px",
+                  top: "3700px",
 
-                  right: "-10px",
+                  right: "-10%",
                 }}
                 src={HDP6}
-                className="pic"
+                className="pic pic1"
                 alt=""
               />
             </Link>
@@ -266,16 +260,72 @@ class IndexPage extends Component {
               <img
                 style={{
                   position: "absolute",
-                  top: "2800px",
+                  top: "3000px",
 
-                  right: "10%",
+                  right: "-5%",
                 }}
                 src={HDP1}
-                className="pic"
+                className="pic pic1"
                 alt=""
               />
             </Link>
           </div>
+
+          {/* <div
+            className="allphone"
+            style={{
+              width: "100%",
+              height: "3000px",
+              transform: this.state.step2
+                ? "translateY(-2000px)"
+                : "translateY(0px)",
+              transition: "transform 300s ease-out",
+            }}
+          >
+            <Link to="nina-collection">
+              <img src={N2} className="pic" alt="" />
+            </Link>
+            <br />
+            <Link to="banlieue-x">
+              <img src={BX7} className="pic " alt="" />
+            </Link>
+            <Link to="heures-de-pointe">
+              {" "}
+              <img src={HDP8} className="pic " alt="" />
+            </Link>
+            <Link to="banlieue-x">
+              <img src={BX2} className="pic" alt="" />
+            </Link>
+
+            <Link to="heures-de-pointe">
+              {" "}
+              <img src={HDP7} className="pic " alt="" />
+            </Link>
+            <Link to="banlieue-x">
+              <img src={BX3} className="pic" alt="" />
+            </Link>
+            <Link to="knicks-queens">
+              <img src={Q1} className="pic " alt="" />
+            </Link>
+            <Link to="heures-de-pointe">
+              <img src={HDP3} className="pic " alt="" />
+            </Link>
+            <Link to="nina-collection">
+              <img src={N3} className="pic" alt="" />
+            </Link>
+            <Link to="nina-collection">
+              <img src={N1} className="pic " alt="" />
+            </Link>
+            <Link to="banlieue-x">
+              <img src={BX8} className="pic" alt="" />{" "}
+            </Link>
+            <Link to="heures-de-pointe">
+              <img src={HDP6} className="pic " alt="" />
+            </Link>
+            <Link to="heures-de-pointe">
+              <img src={HDP1} className="pic" alt="" />
+            </Link>
+          </div> */}
         </Layout>
       </div>
     )
