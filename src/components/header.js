@@ -24,6 +24,7 @@ const Header = ({ siteTitle }) => (
         </div>
       </div>
       <Link to="/about">ABOUT</Link>
+      <Link to="/moodboard">MOODBOARD</Link>
     </div>
   </header>
 )

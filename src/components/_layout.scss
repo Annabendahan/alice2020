@@ -633,3 +633,7 @@ pre tt:after {
     padding: 12% 8%;
   }
 }
+
+footer a {
+  color: map-get($colors, blue);
+}

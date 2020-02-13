@@ -14,7 +14,7 @@
     width: 40%;
   }
   @include breakpoint(xl) {
-    width: 35%;
+    width: 33%;
   }
 
   @include breakpoint(xxl) {
@@ -248,4 +248,29 @@ video {
 
 .allphone {
   display: none;
+}
+
+.moodboard {
+  margin: auto;
+  margin-top: 20%;
+
+  position: relative;
+  z-index: 10;
+  width: 85%;
+  img {
+    margin: 2px;
+
+    width: 31%;
+    float: left;
+  }
+  @include breakpoint(s) {
+    img {
+    }
+    margin-top: 10%;
+  }
+  @include breakpoint(m) {
+    img {
+    }
+    margin-top: 5%;
+  }
 }

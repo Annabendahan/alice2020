@@ -107,7 +107,7 @@ class IndexPage extends Component {
               height: "3000px",
               transform: this.state.step2
                 ? "translateY(-2000px)"
-                : "translateY(0px)",
+                : "translateY(300px)",
               transition: "transform 300s ease-out",
             }}
           >

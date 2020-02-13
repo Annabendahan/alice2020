@@ -28,7 +28,8 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="layout">
         <main>{children}</main>
-        {children[0].props.title !== "Accueil" ? (
+        {children[0].props.title !== "Accueil" &&
+        children[0].props.title !== "Moodboard" ? (
           <footer
             style={{
               fontFamily: "Work sans",
@@ -37,7 +38,8 @@ const Layout = ({ children }) => {
             }}
           >
             {" "}
-            Alice Thonnier © Tous droits réservés - Site créé par Anna Bendahan{" "}
+            Alice Thonnier © Tous droits réservés - Site créé par{" "}
+            <a href="http://annabdh.com">Anna Bendahan</a>{" "}
           </footer>
         ) : (
           ""
