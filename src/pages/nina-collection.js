@@ -93,7 +93,7 @@ class Nina extends Component {
               title="NINA COLLECTION"
               date="2018"
               t1="DESIGNER"
-              n1="ALICE THONNIER - HELOISE SAUVET - MARINE FOURNIER - ROXANE DE KORODY"
+              n1="ALICE THONNIER"
               t2="PHOTOGRAPHER"
               n2="GABRIELLE RIOUAH"
               t3="MODEL"

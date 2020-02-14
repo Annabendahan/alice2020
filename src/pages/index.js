@@ -108,7 +108,7 @@ class IndexPage extends Component {
               transform: this.state.step2
                 ? "translateY(-2000px)"
                 : "translateY(300px)",
-              transition: "transform 300s ease-out",
+              transition: "transform 150s ease-out",
             }}
           >
             <Link to="nina-collection">
