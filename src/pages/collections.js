@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Text from "../components/Text"
+import Text from "../components/text"
 
 import HDP7 from "../images/sitealice/HDP7.jpg"
 import N1 from "../images/sitealice/N1.png"

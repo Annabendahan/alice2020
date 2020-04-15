@@ -112,24 +112,6 @@ class Heures extends Component {
 
                 <h4> {this.state.img}/7 </h4>
               </div>
-              {/* <Text
-              title="HEURES DE POINTE"
-              date="2018"
-              desc=" Heures de Pointe est une collection unisexe inspirée du métro aux Heures
-        les plus fréquentées. Le concept de la collection est de fusionner des
-        vêtements de personnes positionnées côte à côte pour obtenir des
-        vêtements à pluri-apparence."
-              t1="DESIGNER"
-              n1="ALICE THONNIER"
-              t2="PHOTOGRAPHER"
-              n2="CARA PHOTOGRAPHIES"
-              t3="MODEL"
-              n3="MONIQUE ANDREW / ARNAUD PAGNARO "
-              t4="MAKE UP"
-              n4="MARIA M ZOLA"
-              t5="STUDIO -"
-              n5="STUDIO VALMY"
-            />{" "} */}
             </div>
           </div>
         </div>

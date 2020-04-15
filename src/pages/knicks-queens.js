@@ -105,19 +105,6 @@ class Knicks extends Component {
 
               <h4> {this.state.img}/6 </h4>
             </div>
-            {/* <Text
-              title="KNICKS QUEENS"
-              date="2018"
-              desc="Knicks Queens est une collection de mode inspirée du monde du basketball . Elle rappelle les couleurs de l’équipe des Knicks Queens, le bleu, le orange et le blanc. Le sweat en résille fait écho aux filets et aux grillages des terrains de basket de rue américains. Les poches rondes sur la veste et le pantalon rappellent la forme du ballon de basket."
-              t1="DESIGNER"
-              n1="ALICE THONNIER - HELOISE SAUVET - MARINE FOURNIER - ROXANE DE KORODY"
-              t2="PHOTOGRAPHER"
-              n2=" ROXANE DE KORODY"
-              t3="MODEL"
-              n3="ATHENA LISNYJ "
-              t4="PLACE"
-              n4="PIGALLE BASKETBALL"
-            /> */}
           </div>
         </div>
       </Layout>

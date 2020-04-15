@@ -96,18 +96,6 @@ class Nina extends Component {
 
               <h4> {this.state.img}/3 </h4>
             </div>
-            {/* <Text
-              title="NINA COLLECTION"
-              date="2018"
-              t1="DESIGNER"
-              n1="ALICE THONNIER"
-              t2="PHOTOGRAPHER"
-              n2="GABRIELLE RIOUAH"
-              t3="MODEL"
-              n3="NINA STEIMEL "
-              t4="MAKE UP"
-              n4="CAROLINE MADISON"
-            /> */}
           </div>
         </div>
       </Layout>

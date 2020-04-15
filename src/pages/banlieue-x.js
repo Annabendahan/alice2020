@@ -102,25 +102,6 @@ class Banlieue extends Component {
 
               <h4> {this.state.img}/5 </h4>
             </div>
-            {/* <Text
-              title="BANLIEUE X"
-              date="2018"
-              desc="What do young people do in a post-apocalyptic world, where perfection is not wanted anymore and borders are abolished? They start creating. They do fashion. They dance. They put their forces together and build something new. A story about a group of friends that is not afraid of the future. The timeless Banlieue serves as setting, under the artistic direction of Oana von Rave – in exclusive for The Flow House. - Karim Coppola"
-              t1="DESIGNER"
-              n1="ALICE THONNIER - HELOISE SAUVET - MARINE FOURNIER - ROXANE DE KORODY"
-              t2="PHOTOGRAPHER"
-              n2=" JEAN MARC JALEEL"
-              t3="STARRING"
-              n3="YAMINE KHIAR - PAUL HUET - HELMY EL WAKIL (WILLIAMS MANAGEMENT) - STEPHANIE ARNAUD - JULIENNE I - LAURA UNG "
-              t4="HAIR & MAKE UP"
-              n4="ANTOINE L'HEBRELLEC - CHLOÉ BADEAU"
-              t5="DANCERS -"
-              n5="PERKINS KELLEY - MR BROMA"
-              t6="STYLED BY -"
-              n6="OANA VON RAVEN"
-              t7="BRANDS -"
-              n7="ALICE THONNIER - ASOS - LA PERLA - AMERICAN APPAREL - NIKE - DR MARTENS - TOD'S - ACNE STUDIO - VINTAGE ARMY  IN EXCLUSIVE FOR: THE FLOW HOUSE"
-            /> */}
           </div>
         </div>
       </Layout>
