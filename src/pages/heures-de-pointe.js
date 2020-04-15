@@ -82,27 +82,37 @@ class Heures extends Component {
       <Layout>
         <SEO title="Heures de pointe" />
 
-        <div
-          onClick={() => this.showNextPic()}
-          className="pics"
-          style={{
-            transform: this.state.mounted
-              ? "translateY(0)"
-              : "translateY(50vh)",
-            transition: ".4s all .7s ease-out",
-            opacity: this.state.mounted ? 1 : 0,
-            width: "100%",
-          }}
-        >
-          <div style={{ textAlign: "center" }}> {img}</div>
-
+        <div className="collection">
           <div
+            onClick={() => this.showNextPic()}
+            className="pics"
             style={{
-              opacity: this.state.mounted3 ? 1 : 0,
-              transition: "all 1s ease-out",
+              transform: this.state.mounted
+                ? "translateY(0)"
+                : "translateY(50vh)",
+              transition: ".4s all .7s ease-out",
+              opacity: this.state.mounted ? 1 : 0,
             }}
           >
-            <Text
+            <div className="big-image" style={{ textAlign: "center" }}>
+              {" "}
+              {img}
+            </div>
+
+            <div
+              style={{
+                opacity: this.state.mounted3 ? 1 : 0,
+                transition: "all 1s ease-out",
+              }}
+            >
+              <div className="infos">
+                <h4>
+                  HEURES DE POINTE - <span className="date">2018</span>
+                </h4>
+
+                <h4> {this.state.img}/7 </h4>
+              </div>
+              {/* <Text
               title="HEURES DE POINTE"
               date="2018"
               desc=" Heures de Pointe est une collection unisexe inspirée du métro aux Heures
@@ -119,7 +129,8 @@ class Heures extends Component {
               n4="MARIA M ZOLA"
               t5="STUDIO -"
               n5="STUDIO VALMY"
-            />{" "}
+            />{" "} */}
+            </div>
           </div>
         </div>
       </Layout>

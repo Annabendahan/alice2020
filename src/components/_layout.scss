@@ -203,6 +203,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
+
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -284,7 +285,7 @@ h4 {
   font-family: "Metrophobic", sans-serif;
   font-weight: 600;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.1;
 }
 h5 {
@@ -621,19 +622,24 @@ pre tt:after {
   }
 }
 
-.layout {
-  padding: 10% 5%;
-  @include breakpoint(s) {
-    padding: 8% 6%;
-  }
-  @include breakpoint(m) {
-    padding: 10% 7%;
-  }
-  @include breakpoint(l) {
-    padding: 12% 8%;
-  }
-}
-
 footer a {
   color: map-get($colors, blue);
+}
+
+.layout {
+  height: 100vh;
+
+  padding: 7vh 5%;
+  @include breakpoint(s) {
+    padding: 7vh 6%;
+  }
+  @include breakpoint(m) {
+    padding: 9vh 7%;
+  }
+  @include breakpoint(l) {
+    padding: 8vh 4%;
+  }
+  @include breakpoint(xl) {
+    padding: 8vh 4%;
+  }
 }

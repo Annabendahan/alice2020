@@ -7,6 +7,7 @@ header {
   align-items: center;
   position: fixed;
   z-index: 9;
+  height: 10vh;
 
   h1 {
     margin-bottom: 0px;
@@ -16,22 +17,25 @@ header {
     @include breakpoint(s) {
       max-width: unset;
 
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
   }
 
   a {
     text-decoration: none;
   }
-  padding: 3% 5%;
+  padding: 0% 5%;
   @include breakpoint(s) {
-    padding: 4% 6%;
+    padding: 0% 6%;
   }
   @include breakpoint(m) {
-    padding: 6% 7%;
+    padding: 0% 7%;
   }
   @include breakpoint(l) {
-    padding: 2% 8%;
+    padding: 0% 4%;
+  }
+  @include breakpoint(xl) {
+    padding: 0% 4%;
   }
 
   img {
@@ -67,7 +71,7 @@ header {
     font-size: 0.7rem;
     @include breakpoint(s) {
       margin-left: 25px;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
     font-family: "Metrophobic", sans-serif;
     font-weight: 400;

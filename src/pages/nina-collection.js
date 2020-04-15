@@ -89,7 +89,14 @@ class Nina extends Component {
               transition: "all 1s ease-out",
             }}
           >
-            <Text
+            <div className="infos">
+              <h4>
+                NINA COLLECTION - <span className="date">2018</span>
+              </h4>
+
+              <h4> {this.state.img}/3 </h4>
+            </div>
+            {/* <Text
               title="NINA COLLECTION"
               date="2018"
               t1="DESIGNER"
@@ -100,7 +107,7 @@ class Nina extends Component {
               n3="NINA STEIMEL "
               t4="MAKE UP"
               n4="CAROLINE MADISON"
-            />
+            /> */}
           </div>
         </div>
       </Layout>

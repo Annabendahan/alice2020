@@ -95,7 +95,14 @@ class Banlieue extends Component {
               transition: "all 1s ease-out",
             }}
           >
-            <Text
+            <div className="infos">
+              <h4>
+                BANLIEUE X - <span className="date">2018</span>
+              </h4>
+
+              <h4> {this.state.img}/5 </h4>
+            </div>
+            {/* <Text
               title="BANLIEUE X"
               date="2018"
               desc="What do young people do in a post-apocalyptic world, where perfection is not wanted anymore and borders are abolished? They start creating. They do fashion. They dance. They put their forces together and build something new. A story about a group of friends that is not afraid of the future. The timeless Banlieue serves as setting, under the artistic direction of Oana von Rave – in exclusive for The Flow House. - Karim Coppola"
@@ -113,7 +120,7 @@ class Banlieue extends Component {
               n6="OANA VON RAVEN"
               t7="BRANDS -"
               n7="ALICE THONNIER - ASOS - LA PERLA - AMERICAN APPAREL - NIKE - DR MARTENS - TOD'S - ACNE STUDIO - VINTAGE ARMY  IN EXCLUSIVE FOR: THE FLOW HOUSE"
-            />
+            /> */}
           </div>
         </div>
       </Layout>

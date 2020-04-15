@@ -98,7 +98,14 @@ class Knicks extends Component {
               transition: "all 1s ease-out",
             }}
           >
-            <Text
+            <div className="infos">
+              <h4>
+                KNICKS QUEENS - <span className="date">2018</span>
+              </h4>
+
+              <h4> {this.state.img}/6 </h4>
+            </div>
+            {/* <Text
               title="KNICKS QUEENS"
               date="2018"
               desc="Knicks Queens est une collection de mode inspirée du monde du basketball . Elle rappelle les couleurs de l’équipe des Knicks Queens, le bleu, le orange et le blanc. Le sweat en résille fait écho aux filets et aux grillages des terrains de basket de rue américains. Les poches rondes sur la veste et le pantalon rappellent la forme du ballon de basket."
@@ -110,7 +117,7 @@ class Knicks extends Component {
               n3="ATHENA LISNYJ "
               t4="PLACE"
               n4="PIGALLE BASKETBALL"
-            />
+            /> */}
           </div>
         </div>
       </Layout>

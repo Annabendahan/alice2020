@@ -7,11 +7,6 @@ import SEO from "../components/seo"
 const Text = props => (
   <div>
     <div className="text">
-      <div className="part1">
-        <h4> {props.date}</h4>
-        <h4> DESIGNER & PATTERN MAKER</h4>
-      </div>
-      <h3> {props.title} </h3>
       <p> {props.desc}</p>
       <h4>
         {props.t1} - <b>{props.n1}</b>
@@ -34,6 +29,8 @@ const Text = props => (
       <h4>
         {props.t7} <b>{props.n7}</b>
       </h4>
+      <br />
+      <Link to={props.link}> Découvrir la collection </Link>
     </div>
   </div>
 )

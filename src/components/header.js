@@ -6,7 +6,6 @@ import logo from "../images/sitealice/12H50.png"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      margin: `1rem 0rem`,
       display: `flex`,
     }}
   >
@@ -15,13 +14,7 @@ const Header = ({ siteTitle }) => (
     </Link>
     <div className="navs">
       <div className="coll">
-        <Link>COLLECTIONS</Link>
-        <div className="colld">
-          <Link to="/heures-de-pointe"> Heures de pointe</Link> <br />{" "}
-          <Link to="/banlieue-x"> Banlieue x</Link> <br />{" "}
-          <Link to="/nina-collection"> Nina</Link> <br />{" "}
-          <Link to="/knicks-queens"> Knicks</Link>{" "}
-        </div>
+        <Link to="/collections">COLLECTIONS</Link>
       </div>
       <Link to="/about">ABOUT</Link>
       <Link to="/moodboard">MOODBOARD</Link>
